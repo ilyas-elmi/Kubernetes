@@ -26,18 +26,19 @@ A simple containerized application is deployed within the Minikube cluster. The 
 3. **Deploy the application** using Kubernetes manifests.
 4. **Expose the service** to allow external access.
 5. **Test the deployment** by accessing the application via the assigned URL.
-
 ---
 
+```mermaid
 graph TD
     A[Internet Client] -->|HTTP Request (Port 3000)| B[AWS EC2 Instance]
-    B --> C[Security Group<br/>(SSH:22, TCP:3000)]
-    B --> D[Port Forwarding<br/>(3000 to 80)]
+    B --> C[Security Group(SSH:22, TCP:3000)]
+    B --> D[Port Forwarding(3000 to 80)]
     B --> E[Docker Engine]
     E --> F[Minikube Cluster]
     F --> G[Kubernetes API Server]
-    G --> H[Kubernetes Service<br/>(echo-server-service)]
-    H --> I[Kubernetes Deployment<br/>(echo-server)]
+    G --> H[Kubernetes Service(echo-server-service)]
+    H --> I[Kubernetes Deployment(echo-server)]
     I --> J[Pod Instance 1]
     I --> K[Pod Instance 2]
-    D --> H 
+    D --> H
+```
