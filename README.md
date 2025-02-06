@@ -29,16 +29,13 @@ A simple containerized application is deployed within the Minikube cluster. The 
 ---
 
 ```mermaid
-graph TD
-    A[Internet Client] -->|HTTP Request on Port 3000| B[AWS EC2 Instance]
-    B --> C[Security Group SSH:22, TCP:3000]
-    B --> D[Port Forwarding 3000 to 80]
-    B --> E[Docker Engine]
-    E --> F[Minikube Cluster]
-    F --> G[Kubernetes API Server]
-    G --> H[Kubernetes Service echo-server-service]
-    H --> I[Kubernetes Deployment echo-server]
-    I --> J[Pod Instance 1]
-    I --> K[Pod Instance 2]
-    D --> H
+flowchart TD
+    A["Client (HTTP Request on Port 3000)"] --> B["AWS EC2 Instance"]
+    B --> C["Docker Engine"]
+    C --> D["Minikube Cluster"]
+    D --> E["Kubernetes API Server"]
+    E --> F["Kubernetes Service (echo-server-service)"]
+    F --> G["Kubernetes Deployment (echo-server)"]
+    G --> H["Pod Instance 1"]
+    G --> I["Pod Instance 2"]
 ```
