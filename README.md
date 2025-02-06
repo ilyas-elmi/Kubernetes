@@ -27,9 +27,17 @@ A simple containerized application is deployed within the Minikube cluster. The 
 4. **Expose the service** to allow external access.
 5. **Test the deployment** by accessing the application via the assigned URL.
 
-## Cleanup and Resource Management
-Once testing is complete, the EC2 instance can be terminated, ensuring a clean and cost-effective teardown without residual cloud resources.
-
 ---
 
-This project highlights key Kubernetes concepts in a cloud-hosted environment, providing a practical demonstration of container orchestration, networking, and deployment automation.
+graph TD
+    A[Internet Client] -->|"HTTP Request (Port 3000)"| B[AWS EC2 Instance]
+    B --> C["Security Group<br/>(SSH:22, TCP:3000)"]
+    B --> D["Port Forwarding<br/>(3000 → 80)"]
+    B --> E[Docker Engine]
+    E --> F[Minikube Cluster]
+    F --> G[Kubernetes API Server]
+    G --> H["Kubernetes Service<br/>(echo-server-service)"]
+    H --> I["Kubernetes Deployment<br/>(echo-server)"]
+    I --> J[Pod Instance 1]
+    I --> K[Pod Instance 2]
+    D --> H
