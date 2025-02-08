@@ -30,8 +30,8 @@ A simple containerized application is deployed within the Minikube cluster. The 
 
 ```mermaid
 flowchart TD
-    A["Client (HTTP Request on Port 3000)"] --> B["EC2 Instance (Kubernetes Node)"]
-    B --> C["kube-proxy (NodePort)"]
+    A["Client (HTTP Request on Port 3000)"] --> B["AWS EC2 Instance (Minikube Node)"]
+    B --> C["kube-proxy (NodePort forwarding)"]
     C --> D["Kubernetes Service (echo-server-service)"]
     D --> E["Kubernetes Deployment (echo-server)"]
     E --> F["Pod Instance 1"]
