@@ -4,7 +4,7 @@
 
 ## 1. Installing Docker
 
-![Docker Installed](../screenshots/docker-installed.png)
+![Docker Installed](../Screenshots/Docker-Installed.png)
 
 **Explanation:**  
 This screenshot confirms that Docker has been successfully installed on my Amazon Linux 2 instance. Docker serves as the container runtime for our Kubernetes cluster, making it a fundamental prerequisite.
