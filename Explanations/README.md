@@ -30,7 +30,7 @@ This screenshot shows that `kubectl`, the Kubernetes command-line interface, has
 
 ## 3. Minikube Installed
 
-![Minikube Installed](../screenshots/minikube-installed.png)
+![Minikube Installed](../Screenshots/Minikube-Installed.png)
 
 **Explanation:**  
 This image verifies that Minikube is installed correctly. Minikube creates a local, single-node Kubernetes cluster, allowing us to simulate a production-like environment for development and testing without the overhead of managing a full-scale cluster.
@@ -43,7 +43,7 @@ This image verifies that Minikube is installed correctly. Minikube creates a loc
 
 ## 4. Conntrack Installed
 
-![Conntrack Installed](../screenshots/conntrack-installed.png)
+![Conntrack Installed](../Screenshots/conntrack-installed.png)
 
 **Explanation:**  
 This screenshot confirms the installation of `conntrack-tools`. Conntrack is essential for tracking and managing network connections between pods within the Kubernetes cluster, ensuring smooth internal communication.
@@ -56,7 +56,7 @@ This screenshot confirms the installation of `conntrack-tools`. Conntrack is ess
 
 ## 5. Deployment Created
 
-![Deployment Created](../screenshots/deployment.png)
+![Deployment Created](../Screenshots/deployment.png)
 
 **Explanation:**  
 This screenshot displays the creation of our initial Kubernetes deployment using a YAML configuration file. It shows how the Docker image (`anvesh35/echo-pod-name`) is deployed across the cluster. The deployment automates the creation and management of pods.
@@ -68,13 +68,13 @@ This screenshot displays the creation of our initial Kubernetes deployment using
 ![Deployment Updated](../screenshots/deployment-2.png)
 
 **Explanation:**  
-In this screenshot, we see an updated configuration of the deployment. Changes here may include optimized resource settings or other refinements. This reflects our iterative approach to enhancing the application's performance and reliability.
+In this screenshot, the .yml deployment we created is executed. 
 
 ---
 
 ## 7. Pods Running
 
-![Pods Running](../screenshots/pods-running.png)
+![Pods Running](../Screenshots/pods-running.png)
 
 **Explanation:**  
 This image captures the output of the `kubectl get pods` command, showing that the pods are actively running. It confirms that our deployment has successfully created the required pods and that they are operating as expected.
@@ -83,7 +83,7 @@ This image captures the output of the `kubectl get pods` command, showing that t
 
 ## 8. Service Created (NodePort Exposure)
 
-![Service Created](../screenshots/service-creation.png)
+![Service Created](../Screenshots/service-creation.png)
 
 **Explanation:**  
 This screenshot demonstrates the creation of a Kubernetes Service using the NodePort type. This service exposes the application externally by assigning a specific port on each node, making the application accessible from outside the cluster.
@@ -92,7 +92,7 @@ This screenshot demonstrates the creation of a Kubernetes Service using the Node
 
 ## 9. Local URL Displayed
 
-![Local URL](../screenshots/local-url.png)
+![Local URL](../Screenshots/local-url.png)
 
 **Explanation:**  
 This image shows the local URL output from the command `minikube service echo-server-service --url`. The URL provided by Minikube confirms that the service is correctly set up for external access.
@@ -101,7 +101,7 @@ This image shows the local URL output from the command `minikube service echo-se
 
 ## 10. Port Forwarding Established
 
-![Port Forwarding](../screenshots/port-forwarding.png)
+![Port Forwarding](../Screenshots/port-forwarding.png)
 
 **Explanation:**  
 This screenshot illustrates the execution of the `kubectl port-forward` command, which maps an external port on the EC2 instance (port 3000) to the pod’s internal port (port 80). Port forwarding is a useful technique for testing and debugging without altering service configurations.
