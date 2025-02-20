@@ -65,7 +65,7 @@ This screenshot displays the creation of our initial Kubernetes deployment using
 
 ## 6. Deployment Updated (Deployment-2)
 
-![Deployment Updated](../screenshots/deployment-2.png)
+![Deployment Updated](../Screenshots/deployment-2.png)
 
 **Explanation:**  
 In this screenshot, the .yml deployment we created is executed. 
